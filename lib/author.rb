@@ -1,19 +1,19 @@
 class Author 
   attr_accessor :name, :post, :title
   
-  @@count = 0
-  @@all = []
+  @@post_count = 0
+  #@@all = []
   
   def initialize(name)
     @name = name
     @posts = post
     @@count += 1
-    @@all << self
+    #@@all << self
   end
   
-  #def posts= (posts)
-   # @posts = posts
-  #end 
+  def posts
+   Post.all.select {|post| post.author == self}
+ end
   
   def title= (title)
     @title = title
