@@ -15,10 +15,6 @@ class Artist
   
   def add_song(song)
     @songs << song
-    song = Song.new(song)
-    song.artist = self
-    #self#this is telling a song that it belongs to an artist; self keyword refers to the artist on which we are calling this method
-    @@song_count += 1
   end
   
   
