@@ -30,6 +30,6 @@ class Author
   
   
   def self.post_count
-    @@count << self
+    @@post_count << self
   end
 end
