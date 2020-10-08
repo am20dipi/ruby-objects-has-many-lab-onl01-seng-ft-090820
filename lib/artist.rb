@@ -9,8 +9,8 @@ class Artist
     @songs =[]
   end
   
-  def add_song(song)
-    @songs << song
+  def add_song(songs)
+    @songs << songs
     song.artist = self#this is telling a song that it belongs to an artist; self keyword refers to the artist on which we are calling this method
     @@song_count += 1
     @songs
