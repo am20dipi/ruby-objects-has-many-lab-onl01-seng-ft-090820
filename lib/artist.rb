@@ -13,6 +13,7 @@ class Artist
     @songs << song
     song.artist = self#this is telling a song that it belongs to an artist; self keyword refers to the artist on which we are calling this method
     @@song_count += 1
+    @songs
   end
   
   
