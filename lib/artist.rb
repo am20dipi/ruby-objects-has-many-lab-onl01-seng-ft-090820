@@ -7,16 +7,11 @@ class Artist
   def initialize(name)
     @name = name
     @songs =[]
-    #@@all << self
   end
   
-  def songs= (songs)
-    @songs
-  end
-  
-  def add_song(songs)
-    @songs << self
-    songs.artist = self#this is telling a song that it belongs to an artist; self keyword refers to the artist on which we are calling this method
+  def add_song(song)
+    @songs << song
+    song.artist = self#this is telling a song that it belongs to an artist; self keyword refers to the artist on which we are calling this method
     @@song_count +=1
   end
   
